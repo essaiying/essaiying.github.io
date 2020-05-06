@@ -1,0 +1,239 @@
+html {
+  --cases: #3755ec;
+  --recover: #30db41;
+  --death: #f13232;
+  --dark-blue: #020207;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 2, 14, 0.9), rgba(0, 2, 14, 0.9)),
+    url(../img/jake-weirick-Q_RBVFFXR_g-unsplash.jpg);
+  color: ghostwhite;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 51px 0;
+  background-attachment: fixed;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--cases);
+}
+.covid-container {
+  width: 70%;
+  position: relative;
+  margin: auto;
+  margin-top: 77px;
+  padding: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(2, 2, 7, 0.4);
+  color: whitesmoke;
+}
+
+.covid-container span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.border-green {
+  top: 0;
+  right: 0;
+  border: solid 1px var(--recover);
+  border-left: none;
+  border-bottom: none;
+}
+
+.border-blue {
+  bottom: 0;
+  left: 0;
+  border: solid 1px var(--cases);
+  border-right: none;
+  border-top: none;
+}
+.covid-container h1 {
+  font-size: 44px;
+}
+
+.numbers-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.numbers-container div {
+  margin: 0px 20px;
+}
+.numbers-container div h2 {
+  font-size: 17px;
+}
+
+.numbers-container div p {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.cases {
+  color: var(--cases);
+}
+.recoveries {
+  color: var(--recover);
+}
+
+.deaths {
+  color: var(--death);
+}
+
+.negate-margin {
+  margin: 0 -10px;
+}
+.countries-container {
+  width: 70%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.border-green-small {
+  top: 0;
+  left: 0;
+  border: solid 1px var(--recover);
+  border-right: none;
+  border-bottom: none;
+}
+
+.border-blue-small {
+  bottom: 0;
+  right: 0;
+  border: solid 1px var(--cases);
+  border-left: none;
+  border-top: none;
+}
+
+.countries-container span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+}
+.gambia {
+  width: 50%;
+  position: relative;
+  background-color: rgba(2, 2, 7, 0.4);
+  margin: 0px 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.gambia h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.numbers-container-small {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.numbers-container-small div {
+  margin: 0px 20px;
+  text-transform: uppercase;
+}
+
+.numbers-container-small h6 {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.numbers-container-small p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+cite {
+  text-align: center;
+  display: block;
+  font-weight: 100;
+  opacity: 0.2;
+  margin: 10px 0 20px;
+}
+/* --------------------Media Queries---------------------------- */
+@media only screen and (max-width: 942px) {
+  body {
+    padding: 0px 30px;
+  }
+
+  header {
+    padding: 38px 0px 0;
+  }
+  .covid-container {
+    width: 100%;
+  }
+  .covid-container h1 {
+    font-size: 34px;
+  }
+  .numbers-container {
+    margin-top: 26px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .numbers-container div h2 {
+    margin-top: 17px;
+  }
+
+  .countries-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .negate-margin {
+    padding: 0px 10px;
+  }
+  .countries-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gambia {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body {
+    padding: 0px 15px;
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 396px) {
+  .covid-container h1 {
+    font-size: 28px;
+  }
+}
