@@ -1,80 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 Tracker</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <header>
-      <a href="#" class="navbar-brand">Covid-19 Tracker</a>
-      <span class="date" id="date">Tues, 21 April</span>
-    </header>
-    <div class="covid-container">
-      <span class="border-green"></span><span class="border-blue"></span>
-      <h1>coronavirus worldwide</h1>
-      <div class="numbers-container">
-        <div class="cases">
-          <h2>Cases</h2>
-          <p id="cases" class="counter">-</p>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--<link rel="icon" href="./../image/logmin.png" sizes="32x32">-->
+	<title>Acceuil</title>
+ <link rel="icon" href="./../image/logmin.png" sizes="20x20">
+
+	<style type="text/css">
+
+		 span{
+			  color:#000000;
+			  display:block;
+			  height:23px;
+			  padding:3px 15px 0;
+			  text-shadow:1px 1px 1px white;
+			  font-size:0.9em;
+			  font-weight:bolder; 
+			  }
+
+		 body
+		 {
+
+		 	width:100%; 
+		 	height:50%; 
+		 	margin:0px;
+		 
+		 }
+		 header
+		 {
+		 
+		 	width:100%;
+		 	height:15%; 
+		 	background-color:white; 
+		 	position:fixed;
+		 	z-index:100;
+		 
+		 }
+
+
+		#silde{		
+			overflow:hidden;
+			  }
+		img{
+			width:50% !important;
+			height:70% !important;
+			}
+		#slide ul{
+			display: table;
+			width:700%;
+			height: 100%;
+		    -webkit-animation: animNom 20s ease 0s infinite;
+		       -moz-animation: animNom 20s ease 0s infinite;
+		        -ms-animation: animNom 20s ease 0s infinite;
+		         -o-animation: animNom 20s ease 0s infinite;
+		            animation: animNom 20s ease 0s infinite;
+		}
+		#slide ul li{
+			display: table-cell;
+			width:18%;
+			height:40%;
+			list-style:none;}
+
+		@keyframes animNom {
+			from, 14%, to {-webkit-transform:translateX(-0.63%);}
+			16%, 30% {-webkit-transform:translateX(-18.63%);}
+			32%, 46% {-webkit-transform:translateX(-36.63%);}
+			48%, 62% {-webkit-transform:translateX(-54.63%);}
+			64%, 78% {-webkit-transform:translateX(-72.63%);}
+		}  
+
+	
+
+		    nav ul{
+			     position:absolute;
+			     height:20%;
+			     margin:6% 60%;
+			     padding:0;
+			     width: 90%;
+			     white-space:nowrap;
+			}
+			nav ul li{
+			     display:inline;
+			     text-align:center;
+			     height: 80%;
+
+			}
+			nav ul li:nth-child(1) a{width:5%;}
+			nav ul li:nth-child(2) a{width:12%;}
+			nav ul li:nth-child(3) a{width:10%;}
+			nav ul li:nth-child(5) a{width:10%;}
+
+			nav ul li a{
+			     display:inline-block;
+			     box-sizing:border-box;
+			     color:#ffffff;
+			     text-decoration:none;
+			     text-shadow:0 1px 0 black;
+			     background-color:transparent;
+			     transition:background-color .3s ease;
+			     font-size: 0.9em;
+			}
+
+           
+                    .tofdev {
+                                   
+                                   width:60%;
+                                   height:40%;
+                                   overflow:hidden; 
+                             }
+
+                          .ofdev{
+                                   border-radius:100% 100% 100% 100%; 
+                                   width:100%;
+                                   height:100%;
+                                   overflow:hidden; 
+                             }
+
+			nav ul li a:hover,ul li a:focus{
+			     color:#ffffff;
+			     background-color:black;
+			     transition:background-color .3s ease .4s;
+			}
+			nav ul li a:focus{
+			     border-bottom:3px solid ffffff;
+			}
+			nav ul li:last-child::after{
+			     content:"";
+			     position:absolute;
+			     left:0%;
+			     bottom:-3px;
+			     display:block;
+			     width:5%;
+			     height:3px;
+			     background:black;
+			     border-bottom:1px solid rgba(255,255,255,.8);
+			     transition: all .5s ease;
+			}
+			nav ul li:hover ~ li:last-child::after,
+			nav ul li:last-child:hover::after{background: #26a69a;}
+
+			nav ul li:nth-child(1):hover ~ li:last-child::after{left:0;width:5%;}
+			nav ul li:nth-child(2):hover ~ li:last-child::after{left:5.1%;width:12%;}
+			nav ul li:nth-child(3):hover ~ li:last-child::after{left:17.6%;width:10%;}
+			nav ul li:last-child:hover::after{left:27.7%;width:7.5%;}
+
+			ul li
+			{
+				display: inline-block;
+			}
+			ul
+			{
+				list-style: none;
+			}
+
+	 </style>
+</head>
+
+<body>
+	<header >
+		<div style="color:white; font-size:3em;font-weight:bolder;margin-left:5% ; float:left; height: 70%; width: 20%" >
+		<img src="img/1.jpeg" style="width:100%;height: 100%; margin-left: 4%" ></div>
+		<nav>
+			<ul>
+			     <li><a href="index.html">Accueil</a></li>
+			     <li><a href="tocomplet.html">Service</a></li>
+			     <li><a href="tocomplet.html">Service1</a></li>
+			     <li><a href="tocomplet.html">Service2</a></li>
+			</ul>
+		</nav>
+	
+	</header>
+		<div style="height:0.5%; z-index:10; "></div>	
+        <div class="ov" style="width:100%;overflow: hidden; height:10">
+        	<div id="slide">
+            <ul>
+				<li><img src="img/1.jpeg" alt="Abarth 500" >
+				</li>
+				<li><img src="img/2.jpeg" alt="Abarth 500" >
+				</li>
+				<li><img src="img/3.jpeg" alt="Abarth 500" >
+				</li>
+				<li><img src="img/4.jpeg" alt="Abarth 500" >
+				</li>
+				
+				</ul> 
+           </div>
         </div>
-        <div class="recoveries">
-          <h2>Recoveries</h2>
-          <p id="recoveries" class="counter">-</p>
-        </div>
-        <div class="deaths">
-          <h2>Deaths</h2>
-          <p id="deaths" class="counter">-</p>
-        </div>
-      </div>
-    </div>
-    <!-- <p class="mac">Most Affected Countries</p> -->
-    <div class="negate-margin">
-      <div class="countries-container">
-        <div class="gambia">
-          <span class="border-green-small"></span
-          ><span class="border-blue-small"></span>
-          <h5>Dakarafaire</h5>
-          <div class="numbers-container-small">
-            <div class="cases">
-              <h6>Cas</h6>
-              <p id="gambia-cases">-</p>
-            </div>
-            <div class="recoveries">
-              <h6>Guéris</h6>
-              <p id="gambia-recoveries">-</p>
-            </div>
-            <div class="deaths">
-              <h6>Décés</h6>
-              <p id="gambia-deaths">-</p>
-            </div>
-          </div>
-        </div>
-        <div class="gambia">
-          <span class="border-green-small"></span
-          ><span class="border-blue-small"></span>
-          <h5>Sénégal</h5>
-          <div class="numbers-container-small">
-            <div class="cases">
-              <h6>Cas</h6>
-              <p id="senegal-cases">-</p>
-            </div>
-            <div class="recoveries">
-              <h6>Guéris</h6>
-              <p id="senegal-recoveries">-</p>
-            </div>
-            <div class="deaths">
-              <h6>Décés</h6>
-              <p id="senegal-deaths">-</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <cite>Abdul Lahi Jaaw</cite>
- 
-    <script src="app.js"></script>
-    <!-- <script src="./js/functions.js"></script> -->
-  </body>
+	</form>
+    
+  </div>
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+
+<!-- boutton-->
+<style type="text/css">
+button:focus,input[type=button]:focus {
+  background-color: #1d7d74;
+				}
+	button,input[type=button]{
+		  text-decoration: none;
+		  color: #fff;
+		  background-color: #26a69a;
+		  text-align: center;
+		  letter-spacing: .5px;
+		  transition: .2s ease-out;
+		  cursor: pointer;
+		  outline: 0;
+		  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+		  border: none;
+  		  border-radius: 2px;
+  		  display: inline-block;
+  		  height: 36px;
+  		  line-height: 36px;
+  		  padding: 0 2rem;
+ 		  text-transform: uppercase;
+ 		  vertical-align: middle;
+ 		 -webkit-tap-highlight-color: transparent;
+	    }
+	input[type=button]:hover,button:hover
+	{
+		  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+		   background-color: #2bbbad;
+
+	}
+</style>
+<div style ="width:80%; height:40%; background-color:white; border-radius:10px; padding:2%; margin-left: 7%">
+	<div style=" width: 12%; height: 90%; float: left;">
+		 <img src="img/1.jpeg" style ="width:100%; height:100%; float: left;">
+	</div>
+	
+	 <label  style="color:black; width:50%;  text-align:center; font-size:1.3em;" >
+	 Nous sommes une boutique  qui livre à domicile des légumes, du poulet et des produits halieutiques 
+	 A l’état actuel du pays il est important, capital voir primordial de faire attention à son alimentation.
+
+#ChezNgomLégumes vous offre la possibilité de rester chez vous et de commander vos fruits et légumes en toute aisance et en toute sécurité.
+	  <span>Contactez nous, vous ne le regretterez pas !!!</span>
+     
+	 </label>
+
+</div>
+
+<table align="center" style="margin-bottom: 2%">
+ <tr>
+    <td>
+         <div class="ofdev" >  <img src="img/5.jpeg" > </div>
+    </td>
+  <!--  <td >
+        <div class="ofdev" >   <img src="image/oumar.png"></div>
+    </td>-->
+    <td >
+        <div class="ofdev" >   <img src="img/2.jpeg"></div>
+    </td>
+</tr>
+<tr>
+    < <td style="padding-left: 5%">
+    <label style="display: block; font-weight: bolder;"> DG: M. Ngom</label>
+        
+      <label style="display: block; font-weight: bolder;">Entrepreneur bou mag bi</label>
+        
+       
+        <label style="display: block; font-weight: bolder;" >Mail: chewngom@gmail.com</label>
+       
+    </td>
+    < <!-- <td style="padding-left: 5%">
+    <label style="display: block; font-weight: bolder;"> Oumar Ndiaye</label>
+        
+      <label style="display: block; font-weight: bolder;">Analyste Programmeur</label>
+        
+       
+        <label style="display: block; font-weight: bolder;" >Mail : Oumarndiayee@ikane.co</label>
+       
+    </td>-->
+    <td style="padding-left: 5%">
+    <label style="display: block; font-weight: bolder;"> Site: Golf</label>
+        
+      <label style="display: block; font-weight: bolder;">Dakar Cité Alioune Sow</label>
+        
+       
+        <label style="display: block; font-weight: bolder;" >BP: 1700-PIKINE</label>
+       
+    </td>
+</tr>
+</table>
+
+</body>
+
+
+
+<footer style="background-color:rgb(45,83,159); width:100%; height:50%;">	
+<table style="width:95%" align="center">
+       <tr>
+            <td>
+              <h2 style="color:white"><u>Contacts</u></h2>                       
+              <h4 style="color:white"> 
+               Tel:+221 77 0812965<br/>Email: ngomlegum@gmail.com<br/>Twitter: @NgomLegumes<br/>Instagram: @Ngomlegumes<br/> Facebook:Chez Ngom<br/>
+              </h4> <br/>
+            </td>
+
+            
+
+           <td>
+              <h2 style="color:white"><u>Servivces</u></h2>                       
+              <h4 style="color:white"> 
+               Ventes<br/>Livraisons<br/>Assistance<br/>
+              </h4> <br/>
+            </td>
+
+ <!--          <td>
+              <h2 style="color:white"><u>Utilitaires</u></h2>              <h4 style="color:white">Employee de maison<br/>
+               Boy<br/>Traiteur<br/>Lessive<br/>Fleuriste<br/>Decorateur d'interieur<br/>Location d'ustensiles de cuisine<br/>Babysitter<br/>Restaurants/Fast-Food
+              </h4> 
+			  <br/><br/><br/>
+
+
+            </td> -->
+     </table>
+	 <p style="margin:0; text-align: center; border-top: solid;"> Copyright &copy; byLaye <br> Tout droit résevé</p>
+</footer>
+
 </html>
